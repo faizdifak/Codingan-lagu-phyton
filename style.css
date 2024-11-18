@@ -1,0 +1,98 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #FFEAC5;
+    color: #603F26;
+    padding: 20px; /* Mengurangi padding untuk perangkat kecil */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* Mengubah menjadi kolom untuk perangkat kecil */
+    max-width: 900px;
+    padding: 20px; /* Mengurangi padding untuk perangkat kecil */
+    gap: 25px;
+    background: #603F26;
+    border: black;
+    border-radius: 25px;
+    box-shadow: 0 0 25px rgb(244, 245, 245);
+    margin: auto; /* Centering the container */
+}
+
+.premis, .operasi {
+    width: 100%; /* Mengubah lebar menjadi 100% */
+}
+
+.premis label, .operasi label {
+    display: block;
+    color: #FFDBB5;
+    margin: 10px 0 5px;
+}
+
+.premis select, .operasi select, .operasi button {
+    width: 100%; /* Mengubah lebar menjadi 100% */
+    padding: 10px;
+    background-color: #FFDBB5;
+    color: black;
+    border: 3px solid black; 
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.premis option, .operasi button {
+    background-color: #FFDBB5;
+}
+
+.premis option:hover, .operasi button:hover {
+    background-color: #ffaf59;
+}
+
+.operasi button {
+    height: 50px;
+    margin-top: 25px;
+    text-decoration: double;
+}
+
+.delete-button {
+    position: absolute;
+    right: 10px; /* Memberikan jarak dari sisi kanan */
+    top: 10px; /* Memberikan jarak dari sisi atas */
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #FFDBB5;
+    border: 2px solid black;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1; /* Memastikan tombol berada di atas elemen lainnya */
+}
+
+.premis {
+    padding-top: 40px; /* Memberikan ruang tambahan di atas untuk tombol delete */
+}
+.result {
+    width: 100%; /* Mengubah lebar menjadi 100% */
+    max-width: 150px; /* Menjaga lebar maksimum */
+    text-align: center;
+    background-color: #FFDBB5;
+    color: black;
+    border: 3px solid black; 
+    border-radius: 25px;
+    padding: 5%;
+    margin: auto; /* Centering the result */
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+    .container {
+        flex-direction: row; /* Mengubah kembali menjadi baris untuk perangkat lebih besar */
+    }
+    .premis, .operasi {
+        width: 300px; /* Kembali ke lebar tetap untuk perangkat lebih besar */
+    }
+}
